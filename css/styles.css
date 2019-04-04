@@ -80,6 +80,33 @@ h2 {
   line-height: 1.5;
 }
 
-p {
-  margin-bottom: 5%;
+
+#features {
+  padding: 5% 10%;
+  background-color: #5d3a3a;
+  color: white;
+}
+
+.feature-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.feature-img {
+  margin-bottom: 10px;
+}
+
+#footer {
+  text-align: center;
+  padding: 2% 15% 2%;
+  background-color: white;
+}
+
+.footer-logo {
+  margin: 20px;
+  color: black;
+}
+
+#footer p {
+  padding-top: 2%;
 }
