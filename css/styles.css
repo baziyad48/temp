@@ -2,9 +2,32 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color:  white;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+hr {
+  border: 0.5px solid white;
+  margin-top: 0;
+}
+
+input[type="text"], textarea {
+outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
+}
+
 #title {
   position: relative;
 }
+
 .navbar {
   padding: 0.5em 4em ;
   position: absolute;
@@ -13,13 +36,13 @@ body {
   width: 100%;
 }
 
-.navbar-light .navbar-brand {
-  color: white;
+.navbar-brand {
+  color: white !important;
   font-size: 24px;
   font-weight: bold;
 }
 
-.navbar-light .navbar-brand:hover{
+.navbar-brand:hover{
   color: white;
 }
 
@@ -36,12 +59,6 @@ body {
   margin-left: 12px;
 }
 
-input[type="text"], textarea {
-outline: none;
-box-shadow:none !important;
-border:1px solid #ccc !important;
-}
-
 .hero {
   background-image: url("../images/backdrop.jpg");
   background-size: cover;
@@ -49,7 +66,6 @@ border:1px solid #ccc !important;
   width: 100vw;
   position: relative;
 }
-
 
 .hero-text {
   text-align: center;
@@ -74,13 +90,6 @@ border:1px solid #ccc !important;
   margin-bottom: 30px;
 }
 
-h2 {
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-
 #features {
   padding: 5% 10%;
   background-color: #5d3a3a;
@@ -96,17 +105,24 @@ h2 {
   margin-bottom: 10px;
 }
 
+.feature-img:hover {
+  color: #5cb85c;
+}
+
 #footer {
   text-align: center;
   padding: 2% 15% 2%;
   background-color: white;
 }
 
-.footer-logo {
-  margin: 20px;
+#footer p {
+  padding-top: 2%;
+}
+
+#footer a {
   color: black;
 }
 
-#footer p {
-  padding-top: 2%;
+.footer-logo {
+  margin: 20px;
 }

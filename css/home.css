@@ -1,0 +1,57 @@
+body {
+  background-color: #2d4059;
+}
+
+h6 {
+  margin-bottom: 0;
+  color: white;
+}
+
+.container-fluid {
+  width: 70%;
+}
+
+.navbar {
+  position: static;
+}
+
+.log {
+  font-weight: bold;
+}
+
+#recent-friend h3 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5% 0;
+  color: white;
+}
+
+.card-footer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 0.7rem;
+}
+
+.card-box-img {
+  height: 30px;
+  width: auto;
+}
+
+.card-footer p {
+  display: inline;
+  padding-left: 3px;
+}
+
+#footer {
+  background-color:#2d4059;
+  color: white;
+}
+
+#footer a {
+  color: white;
+}
+
+#post {
+  padding: 2% 15px;
+}
