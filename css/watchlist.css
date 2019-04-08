@@ -2,7 +2,15 @@ hr {
   margin: 2px 0;
   border: 1px solid;
 }
+
 .nav-sort {
   font-size: 12px;
   padding: 3px 0;
+}
+#watchlist {
+  padding-bottom: 15px;
+}
+
+#poster {
+  padding: 0;
 }
