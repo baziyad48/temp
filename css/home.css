@@ -50,13 +50,13 @@ h6 {
 }
 
 #post {
-  padding: 2% 15px;
+  padding: 2% 10px 0;
 }
 .media {
   margin-bottom: 2%;
 }
 .media-poster {
-  height: 200px;
+  height: 170px;
   width: auto;
 }
 .media-body {
