@@ -1,10 +1,18 @@
 .container {
   max-width: 960px;
 }
+
 .form-control{
 text-align: justify;
+}
 
-  
+.button-submit {
+  border: 0;
+  margin-top: 15px;
 }
 
 .lh-condensed { line-height: 1.25; }
+
+#footer {
+  margin-top: 50px;
+}
