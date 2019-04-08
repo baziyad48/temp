@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/watchlist.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <title>Watchlist • Letterboxd</title>
+</head>
+
+<body>
+  <section id="title">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="home.html">Letterboxd</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button class="btn log btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-plus"></i> LOG</button>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Diary</a>
+              <a class="dropdown-item" href="#">Reviews</a>
+              <a class="dropdown-item" href="watchlist.html">Watchlist</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Settings</a>
+              <a class="dropdown-item" href="#">Sign Out</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FILMS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DISCOVER</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </section>
+  <section id="watchlist" class="container-fluid">
+    <h6>YOU WANT TO SEE <span>12</span> FILMS</h6>
+    <hr>
+    <ul class=" nav-sort nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DECADE</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Upcoming</a>
+          <a class="dropdown-item" href="#">2030</a>
+          <a class="dropdown-item" href="#">2020</a>
+          <a class="dropdown-item" href="#">2010</a>
+          <a class="dropdown-item" href="#">2000</a>
+          <a class="dropdown-item" href="#">1990</a>
+          <a class="dropdown-item" href="#">1980</a>
+          <a class="dropdown-item" href="#">1970</a>
+          <a class="dropdown-item" href="#">1960</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">GENRE</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Adventure</a>
+          <a class="dropdown-item" href="#">Animation</a>
+          <a class="dropdown-item" href="#">Comedy</a>
+          <a class="dropdown-item" href="#">Crime</a>
+          <a class="dropdown-item" href="#">Documentary</a>
+          <a class="dropdown-item" href="#">Drama</a>
+          <a class="dropdown-item" href="#">Family</a>
+          <a class="dropdown-item" href="#">Fantasy</a>
+          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="#">Horror</a>
+          <a class="dropdown-item" href="#">Musicy</a>
+          <a class="dropdown-item" href="#">Mystery</a>
+          <a class="dropdown-item" href="#">Romance</a>
+          <a class="dropdown-item" href="#">Sci-Fi</a>
+          <a class="dropdown-item" href="#">Thriller</a>
+          <a class="dropdown-item" href="#">War</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SORT BY</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">When Added</a>
+          <a class="dropdown-item" href="#">Name</a>
+          <a class="dropdown-item" href="#">Release Date</a>
+          <a class="dropdown-item" href="#">Popularity</a>
+        </div>
+      </li>
+    </ul>
+    <hr>
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
