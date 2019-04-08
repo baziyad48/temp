@@ -1,0 +1,86 @@
+body {
+    background-color: #2d4059;
+    color: white;
+  }
+  
+  h6 {
+    margin-bottom: 0;
+  }
+  
+  .container-fluid {
+    width: 70%;
+    padding: 3% 0;
+  }
+  
+  .navbar {
+    position: static;
+  }
+  
+  .log {
+    font-weight: bold;
+  }
+  
+  #recent-friend h3 {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5%;
+  }
+  
+  .card-footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 0.7rem;
+  }
+  
+  .card-box-img {
+    height: 30px;
+    width: auto;
+  }
+  .card-box-img1{
+    height: 100px;
+    width: 100px;
+  }
+  .card-footer p {
+    display: inline;
+    padding-left: 3px;
+  }
+  
+  #footer {
+    background-color:#2d4059;
+  }
+  
+  #footer a {
+    color: white;
+  }
+  
+  #post {
+    padding: 2% 10px 0;
+  }
+  .media {
+    margin-bottom: 2%;
+  }
+  .media-poster {
+    height: 170px;
+    width: auto;
+  }
+  .media-body {
+    padding: 1% 2%;
+  }
+  
+  .review {
+    padding-bottom: 5px;
+    margin: 0;
+  }
+  
+  .title {
+    padding-right: 5px;
+  }
+  
+  .year {
+    padding: 0 5px;
+  }
+  
+  .rating {
+    padding: 1px 10px;
+  }
+  
