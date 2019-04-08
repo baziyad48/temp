@@ -6,34 +6,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|IBM+Plex+Sans:700" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/watchlist_films.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-  <title>Letterboxd • Social film discovery.</title>
+  <title>Films • Letterboxd</title>
 </head>
 
 <body>
-  <!-- Navbar, Hero, Title -->
   <section id="title">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="home.html">Letterboxd</a>
-      <!-- Responsive Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Main Navigation Bar -->
       <div class="collapse navbar-collapse" id="navbarNav">
+        <button class="btn log btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-plus"></i> LOG</button>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">SIGN IN</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Diary</a>
+              <a class="dropdown-item" href="#">Reviews</a>
+              <a class="dropdown-item" href="watchlist.html">Watchlist</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Settings</a>
+              <a class="dropdown-item" href="#">Sign Out</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.html">CREATE ACCOUNT</a>
+            <a class="nav-link" href="films.html">FILMS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">DISCOVER</a>
@@ -41,24 +49,68 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
-    <!-- Background Hero -->
-    <div class="container-fluid hero d-flex flex-column justify-content-center align-items-center">
-      <div class="hero-text">
-        <h1 class="heading">The social network for film lovers.</h1>
-        <p>Start your film diary now, it‘s free! Or sign in if you‘re already a member.</p>
-      </div>
-      <div class="overlay"></div>
-    </div>
   </section>
-
-  <!-- Recent Trending Film -->
-  <section id="film" class="container-fluid">
-    <h2>Write and share reviews. Share your life in film.</h2>
-    <p>Below are some popular reviews and movies from this week. Sign up to create your own.</p>
+  <section id="watchlist" class="container-fluid">
+    <h6>YOU HAVE SEEN <span>12</span> FILMS</h6>
+    <hr>
+    <ul class=" nav-sort nav justify-content-end">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DECADE</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Upcoming</a>
+          <a class="dropdown-item" href="#">2030</a>
+          <a class="dropdown-item" href="#">2020</a>
+          <a class="dropdown-item" href="#">2010</a>
+          <a class="dropdown-item" href="#">2000</a>
+          <a class="dropdown-item" href="#">1990</a>
+          <a class="dropdown-item" href="#">1980</a>
+          <a class="dropdown-item" href="#">1970</a>
+          <a class="dropdown-item" href="#">1960</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">GENRE</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Adventure</a>
+          <a class="dropdown-item" href="#">Animation</a>
+          <a class="dropdown-item" href="#">Comedy</a>
+          <a class="dropdown-item" href="#">Crime</a>
+          <a class="dropdown-item" href="#">Documentary</a>
+          <a class="dropdown-item" href="#">Drama</a>
+          <a class="dropdown-item" href="#">Family</a>
+          <a class="dropdown-item" href="#">Fantasy</a>
+          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="#">Horror</a>
+          <a class="dropdown-item" href="#">Musicy</a>
+          <a class="dropdown-item" href="#">Mystery</a>
+          <a class="dropdown-item" href="#">Romance</a>
+          <a class="dropdown-item" href="#">Sci-Fi</a>
+          <a class="dropdown-item" href="#">Thriller</a>
+          <a class="dropdown-item" href="#">War</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SORT BY</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">When Added</a>
+          <a class="dropdown-item" href="#">Name</a>
+          <a class="dropdown-item" href="#">Release Date</a>
+          <a class="dropdown-item" href="#">Popularity</a>
+        </div>
+      </li>
+    </ul>
+    <hr>
+  </section>
+  <section id="poster" class="container-fluid">
     <div class="row row-card">
       <div class="col-md-2">
         <div class="card">
@@ -136,48 +188,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Website Feature -->
-  <section id="features">
-    <p>LETTERBOXD LETS YOU…</p>
-    <div class="row justify-content-center">
-      <div class="col-md-3 feature-box">
-        <i class="fas fa-eye fa-3x feature-img"></i>
-        <p>Keep track of every film you’ve ever watched (or just start from the day you join)</p>
-      </div>
-      <div class="col-md-3 feature-box">
-        <i class="fas fa-heart fa-3x feature-img"></i>
-        <p>Show some love for your favorite films and reviews with a 'like'</p>
-      </div>
-      <div class="col-md-3 feature-box">
-        <i class="fas fa-align-left fa-3x feature-img"></i>
-        <p>Write and share reviews, and follow friends and other members to read theirs</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-3 feature-box ">
-        <i class="fas fa-star fa-3x feature-img"></i>
-        <p>Rate each film on a five-star scale (with halves) to record and share your reaction</p>
-      </div>
-      <div class="col-md-3 feature-box">
-        <i class="fas fa-calendar fa-3x feature-img"></i>
-        <p>Keep a diary of your film watching</p>
-      </div>
-      <div class="col-md-3 feature-box">
-        <i class="fas fa-th-large fa-3x feature-img"></i>
-        <p>Keep a watchlist of films to see</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Media -->
-  <footer id="footer">
-    <a class="footer-logo" href="#"><i class="fab fa-twitter"></i></a>
-    <a class="footer-logo" href="#"><i class="fab fa-facebook-f"></i></a>
-    <a class="footer-logo" href="#"><i class="fab fa-instagram"></i></a>
-    <a class="footer-logo" href="#"><i class="fas fa-envelope"></i></a>
-    <p>© Copyright 2018 Letterboxd</p>
-  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

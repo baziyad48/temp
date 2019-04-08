@@ -9,6 +9,7 @@ h6 {
 
 .container-fluid {
   width: 70%;
+  padding: 3% 0;
 }
 
 .navbar {
@@ -22,7 +23,7 @@ h6 {
 #recent-friend h3 {
   text-align: center;
   margin: 0 auto;
-  padding: 5% 0;
+  padding-bottom: 5%;
 }
 
 .card-footer {
