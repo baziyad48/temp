@@ -1,95 +1,10 @@
-body {
-  background-color: #2d4059;
-  color: white;
-}
-
-h6 {
-  margin-bottom: 0;
-}
-
-.container-fluid {
-  width: 70%;
-  padding: 3% 0;
-}
-
-.navbar {
-  position: static;
-}
-
-.log {
-  font-weight: bold;
-}
-
-#recent-friend h3 {
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 5%;
-}
-
-.card-footer {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.5rem 0.7rem;
-}
-
-.card-box-img {
-  height: 30px;
-  width: auto;
-}
-
-.card-footer p {
-  display: inline;
-  padding-left: 3px;
-}
-
-#footer {
-  background-color:#2d4059;
-}
-
-#footer a {
-  color: white;
-}
-
-#post {
-  padding: 2% 10px 0;
-}
-.media {
-  margin-bottom: 2%;
-}
-.media-poster {
-  height: 170px;
-  width: auto;
-}
-.media-body {
-  padding: 1% 2%;
-}
-
-.review {
-  padding-bottom: 5px;
-  margin: 0;
-}
-
-.title {
-  padding-right: 5px;
-}
-
-.year {
-  padding: 0 5px;
-}
-
-.rating {
-  padding: 1px 10px;
-}
-
-.modal {
-  color: black;
-}
 .star-rating {
   font-size: 0;
   white-space: nowrap;
   display: inline-block;
-  width: 250px;
-  height: 50px;
+  width: 150px;
+  height: 30px;
+  margin-left: 5px;
   overflow: hidden;
   position: relative;
   background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
