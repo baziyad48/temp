@@ -10,11 +10,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/rating.css">
   <link rel="stylesheet" href="css/profile.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   <title>AfterNotes • Social film discovery.</title>
 </head>
 
@@ -26,7 +28,48 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <button class="btn log btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-plus"></i> LOG</button>
+        <button class="btn log btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" type="submit"><i class="fas fa-plus"></i> LOG</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">I Watched...</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="" action="index.html" method="post">
+                  <div class="form-group">
+                    <label for="">Name of Film</label>
+                    <input class="form-control" type="text" name="" value="" placeholder="Enter name of film here..." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Specify Date You Watched It</label>
+                    <input class="form-control" type="date" name="" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Add Review</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your review here..."></textarea>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label for="" class="my-auto">Rating :</label>
+                    <span class="star-rating">
+                      <input type="radio" name="rating" value="1"><i></i>
+                      <input type="radio" name="rating" value="2"><i></i>
+                      <input type="radio" name="rating" value="3"><i></i>
+                      <input type="radio" name="rating" value="4"><i></i>
+                      <input type="radio" name="rating" value="5"><i></i>
+                    </span>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
@@ -35,7 +78,7 @@
               <a class="dropdown-item" href="#">Reviews</a>
               <a class="dropdown-item" href="watchlist.html">Watchlist</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Settings</a>
+              <a class="dropdown-item" href="setting.html">Settings</a>
               <a class="dropdown-item" href="#">Sign Out</a>
             </div>
           </li>
@@ -53,146 +96,28 @@
       </div>
     </nav>
   </section>
-  <section id="recent-friend" class="container-fluid">
-
-        <img class="rounded-circle card-box-img1"  src="images/avatar/baziyad.jpg" alt="">
-        <h6></h6>
-        <p class="d-inline"><a href="#">  Baziyad_Hummam  </a></p>
-        <h1></h1>
-        <img class="rounded-circle card-box-img" src="images/avatar/indo.png" alt="">
-          <p class="d-inline"><a href="#">indonesia</a></p>
-          <img class="rounded-circle card-box-img" src="images/avatar/twitter.png" alt="">
-          <p class="d-inline"><a href="#">Baziyad_Hummam</a></p>
-        <p></p>
-    <h6>FAVORITE FILMS</h6>
-    <hr>
+  <section id="profile" class="container-fluid">
     <div class="row">
-      <div class="col-md-2">
-        <div class="card">
-          <a href="#"><img class="card-img" src="images/poster/bewithyou.jpg" alt=""></a>
-          <div class="card-footer bg-secondary">
-            
+      <div class="avatar col col-md-auto">
+        <img src="images/avatar/baziyad.jpg" alt="" class="rounded-circle">
+      </div>
+      <div class="title col my-auto">
+        <h4>Baziyad Hummam</h3>
+          <i class="fas fa-map-pin"></i>
+          <p style="display: inline;">Indonesia</p>
+          <div class="edit-button mt-2">
+            <button type="button" class="btn btn-secondary btn-sm"><a href="setting.html">Edit Profile</a></button>
           </div>
-        </div>
       </div>
-      <div class="col-md-2">
-        <div class="card">
-          <a href="#"><img class="card-img" src="images/poster/shazam.jpg" alt=""></a>
-          <div class="card-footer bg-secondary">
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card">
-          <a href="#"><img class="card-img" src="images/poster/us.jpg" alt=""></a>
-          <div class="card-footer bg-secondary">
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="card">
-          <a href="#"><img class="card-img" src="images/poster/tncfu.jpg" alt=""></a>
-          <div class="card-footer bg-secondary">
-           
-            </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        
-          <a href="#">Bio<img class="" src="" alt=""></a>
-          <hr>
-          <div class="">
-              <h4>Senior film critic and a total genius critics.</h6>
-      
-         
-          
-          
-          
-          
-        
+      <div class="total-film col my-auto">
+        <ul class="list-inline">
+          <li class="list-inline-item"><span class="total">339</span> Films</li>
+          <li class="list-inline-item">|</li>
+          <li class="list-inline-item"><span class="total">72</span> This year</li>
+        </ul>
       </div>
     </div>
-  </section>
-  <section id="post" class="container-fluid">
-    <h6>RECENT REVIEWS</h6>
-    <hr>
-    <div class="media">
-      <a href="#"><img src="images/poster/alita.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">Alita!</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2019</a></h4>
-          </div>
-          <div class="col-md-auto rating">
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">baziyad</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="media">
-      <a href="#"><img src="images/poster/tncfu.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">The Night Come For Us</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2018</a></h4>
-          </div>
-          <div class="col-md-auto rating">
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">baziyad</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="media">
-      <a href="#"><img src="images/poster/batman.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">Batman The Dark Knight</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2008</a></h4>
-          </div>
-          <div class="col-md-auto rating">
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star"></i></span>
-            <span><i class="fas fa-star-half-alt"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">baziyad</a></p>
-        </div>
-      </div>
-    </div>
- 
+
   </section>
   <footer id="footer">
     <a class="footer-logo" href="#"><i class="fab fa-twitter"></i></a>
