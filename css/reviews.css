@@ -10,3 +10,7 @@
 .total {
   font-weight: bolder;
 }
+
+.nav-link:hover {
+  color: #5cb85c !important;
+}
