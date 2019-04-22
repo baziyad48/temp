@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/watchlist_films.css">
   <link rel="stylesheet" href="css/rating.css">
-  <link rel="stylesheet" href="css/reviews.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-  <title>Reviews • AfterNotes</title>
+  <title>Diary • AfterNotes</title>
 </head>
 
 <body>
@@ -72,7 +72,7 @@
         </div>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PROFILE</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Diary</a>
               <a class="dropdown-item" href="reviews.html">Reviews</a>
@@ -96,124 +96,104 @@
       </div>
     </nav>
   </section>
-  <section id="profile" class="container-fluid pb-0">
-    <div class="row mb-3">
-      <div class="avatar col col-md-auto">
-        <img src="images/avatar/baziyad.jpg" alt="" class="rounded-circle">
-      </div>
-      <div class="title col my-auto">
-        <h4>Baziyad Hummam</h3>
-          <i class="fas fa-map-pin"></i>
-          <p style="display: inline;">Indonesia</p>
-          <div class="edit-button mt-2">
-            <button type="button" class="btn btn-secondary btn-sm"><a href="setting.html">Edit Profile</a></button>
-          </div>
-      </div>
-      <div class="total-film col my-auto">
-        <ul class="list-inline">
-          <li class="list-inline-item"><span class="total">339</span> Films</li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><span class="total">72</span> This year</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section id="nav-menu" class="container-fluid pt-0 pb-0">
-    <hr class="mb-0 pb-0">
-    <nav class="nav mt-1 mb-1">
-      <a class="nav-link" href="reviews.html">REVIEWS</a>
-      <a class="nav-link" href="#">DIARY</a>
-      <a class="nav-link" href="films.html">FILMS</a>
-      <a class="nav-link" href="watchlist.html">WATCHLISTS</a>
-    </nav>
-    <hr>
-  </section>
-  <section id="reviews" class="container-fluid pt-1">
-    <div class="media">
-      <a href="#"><img src="images/poster/shazam.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">Shazam!</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2019</a></h4>
-          </div>
-          <div class="col-md-auto rating">
+  <section id="reviews-table" class="container-fluid">
+    <table class="table table-hover bg-light">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Title</th>
+          <th scope="col">Year</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">22-04-2019</th>
+          <td>Shazam!</td>
+          <td>2019</td>
+          <td>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">Baziyad</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="media">
-      <a href="#"><img src="images/poster/tncfu.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">The Night Come For Us</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2018</a></h4>
-          </div>
-          <div class="col-md-auto rating">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">21-04-2019</th>
+          <td>The Night Come For Us</td>
+          <td>2018</td>
+          <td>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">Baziyad</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="media">
-      <a href="#"><img src="images/poster/bewithyou.jpg" class="rounded-sm border border-white media-poster" alt="..."></a>
-      <div class="media-body">
-        <div class="row media-body-header">
-          <div class="col-md-auto title">
-            <h4><a href="#">Be With You</a></h4>
-          </div>
-          <div class="col-md-auto year">
-            <h4><a href="#">2018</a></h4>
-          </div>
-          <div class="col-md-auto rating">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">20-04-2019</th>
+          <td>Be With You</td>
+          <td>2018</td>
+          <td>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star"></i></span>
             <span><i class="fas fa-star-half-alt"></i></span>
-          </div>
-        </div>
-        <p class="review text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo
-          consequat.</p>
-        <div class="media-body-footer">
-          <img class="rounded-circle card-box-img" src="images/avatar/baziyad.jpg" alt="">
-          <p class="d-inline"><a href="#">Baziyad</a></p>
-        </div>
-      </div>
-    </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">19-04-2019</th>
+          <td>Pengabdi Setan</td>
+          <td>2018</td>
+          <td>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star-half-alt"></i></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">18-04-2019</th>
+          <td>Captain Marvel</td>
+          <td>2019</td>
+          <td>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">17-04-2019</th>
+          <td>Us</td>
+          <td>2019</td>
+          <td>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star-half-alt"></i></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">16-04-2019</th>
+          <td>The Dark Knight</td>
+          <td>2010</td>
+          <td>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-  <footer id="footer">
+  <footer id="footer" class="pt-1">
     <a class="footer-logo" href="#"><i class="fab fa-twitter"></i></a>
     <a class="footer-logo" href="#"><i class="fab fa-facebook-f"></i></a>
     <a class="footer-logo" href="#"><i class="fab fa-instagram"></i></a>
     <a class="footer-logo" href="#"><i class="fas fa-envelope"></i></a>
     <p>© Copyright 2018 AfterNotes</p>
   </footer>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
