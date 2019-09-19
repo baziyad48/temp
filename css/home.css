@@ -63,7 +63,10 @@ h6 {
 .media-body {
   padding: 1% 2%;
 }
-
+.btn{
+  font-weight: bold;
+  color: white;
+}
 .review {
   padding-bottom: 5px;
   margin: 0;
