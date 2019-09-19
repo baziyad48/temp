@@ -72,8 +72,8 @@ if(isset($_POST['register'])){
         <form action="" method="POST">
 
             <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
+                <label for="name">Name</label>
+                <input class="form-control" type="text" name="name" placeholder="Name" />
             </div>
 
             <div class="form-group">
@@ -83,7 +83,7 @@ if(isset($_POST['register'])){
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" placeholder="Alamat Email" />
+                <input class="form-control" type="email" name="email" placeholder="Email" />
             </div>
 
             <div class="form-group">
@@ -91,16 +91,14 @@ if(isset($_POST['register'])){
                 <input class="form-control" type="password" name="password" placeholder="Password" />
             </div>
 
-            <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
+            <input type="submit" class="btn btn-success btn-block" name="register" value="Register" />
 
         </form>
             
         </div>
 
         <div class="col-md-3">
-            <img class="img img-responsive" src="images/favicon.png" />
-          </div>
-           
+        <img class="img img-responsive" src="images/favicon2.png" />
         </div>
 
     </div>

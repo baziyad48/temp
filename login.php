@@ -1,44 +1,43 @@
-<?php
+<?php 
 
 require_once("proseslogin.php");
 
-if(isset($_POST['register'])){
+if(isset($_POST['login'])){
 
-    // filter data yang diinputkan
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    // enkripsi password
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-
-    // menyiapkan query
-    $sql = "INSERT INTO users (name, username, email, password) 
-            VALUES (:name, :username, :email, :password)";
+    $sql = "SELECT * FROM users WHERE username=:username OR email=:email";
     $stmt = $db->prepare($sql);
-
+    
     // bind parameter ke query
     $params = array(
-        ":name" => $name,
         ":username" => $username,
-        ":password" => $password,
-        ":email" => $email
+        ":email" => $username
     );
 
-    // eksekusi query untuk menyimpan ke database
-    $saved = $stmt->execute($params);
+    $stmt->execute($params);
 
-    // jika query simpan berhasil, maka user sudah terdaftar
-    // maka alihkan ke halaman login
-    if($saved) header("Location: login.php");
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // jika user terdaftar
+    if($user){
+        // verifikasi password
+        if(password_verify($password, $user["password"])){
+            
+            session_start();
+            $_SESSION["user"] = $user;
+            
+            header("Location: home.html");
+        }
+    }
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -66,45 +65,35 @@ if(isset($_POST['register'])){
 
         <p>&larr; <a href="index.php">Home</a>
 
-        <h2>Join Us!</h2>
-        <p>Have an account? <a href="login.php">Sign in</a></p>
+        <h4>Welcome Back</h4>
+        <p>need account? <a href="register.php">Register</a></p>
 
         <form action="" method="POST">
 
             <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
-            </div>
-
-            <div class="form-group">
                 <label for="username">Username</label>
-                <input class="form-control" type="text" name="username" placeholder="Username" />
+                <input class="form-control" type="text" name="username" placeholder="Username or email" />
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" name="email" placeholder="Alamat Email" />
-            </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-control" type="password" name="password" placeholder="Password" />
             </div>
 
-            <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
+            <input type="submit" class="btn btn-success btn-block" name="login" value="Login" />
 
         </form>
             
         </div>
 
-        <div class="col-md-3">
-            <img class="img img-responsive" src="images/favicon.png" />
-          </div>
-           
+        <div class="col-md-6">
+            
+            <img class="img img-responsive" src="images/favicon2.png" />
         </div>
 
     </div>
 </div>
-
+    
 </body>
 </html>

@@ -1,3 +1,39 @@
+<?php
+require_once("proseslogin.php");
+
+if(isset($_POST['SIGN UP'])){
+
+  // filter data yang diinputkan
+  $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+  $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+  // enkripsi password
+  $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+  $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+
+  // menyiapkan query
+  $sql = "INSERT INTO users (name, username, email, password) 
+          VALUES (:name, :username, :email, :password)";
+  $stmt = $db->prepare($sql);
+
+  // bind parameter ke query
+  $params = array(
+      ":name" => $name,
+      ":username" => $username,
+      ":password" => $password,
+      ":email" => $email
+  );
+
+  // eksekusi query untuk menyimpan ke database
+  $saved = $stmt->execute($params);
+
+  // jika query simpan berhasil, maka user sudah terdaftar
+  // maka alihkan ke halaman login
+  if($saved) header("Location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +66,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button type="button" class="btn pt-0 pr-0 pl-0 pb-0" data-toggle="modal" data-target="#SignIn">
-              <a href="#" class="nav-link">SIGN IN</a>
+            <button type="button" class="btn pt-0 pr-0 pl-0 pb-0" data-target="#SignIn">
+              <a class="nav-link" href = "login.php">SIGN IN</a>
             </button>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn pt-0 pr-0 pl-0 pb-0" data-toggle="modal" data-target="#SignUp">
-              <a href="#" class="nav-link">CREATE ACCOUNT</a>
+            <button type="button" class="btn pt-0 pr-0 pl-0 pb-0" data-target="#SignUp">
+              <a class="nav-link" href = "register.php">CREATE ACCOUNT</a>
             </button>
           </li>
           <li class="nav-item">
@@ -67,14 +103,11 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-<<<<<<< HEAD
-=======
         </div>
-        <form action="home.html" method="POST">
 
-      
+        <form action="proseslogin.php" method="POST">
         <div class="modal-body">
-          <form>
+        
             <div class="form-group">
               <label>Username</label>
               <div class="input-group">
@@ -95,7 +128,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">SIGN IN</button>
+          <button type="submit" name = 'sign in' class="btn btn-success">SIGN IN</button>
         </div>
       </div>
     </div>
@@ -112,7 +145,15 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+        <div class="form-group">
+              <label>Nama Lengkap</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-user"></i></div>
+                </div>
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
+              </div>
+            </div>
             <div class="form-group">
               <label>Username</label>
               <div class="input-group">
@@ -142,7 +183,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">SIGN UP</button>
+          <button type="submit" name = 'register' class="btn btn-success">SIGN UP</button>
         </div>
       </div>
     </div>
@@ -157,81 +198,70 @@
         <div class="card">
           <img class="card-img" src="images/poster/us.jpg" alt="">
           <a class="stretched-link" href="#"></a>
->>>>>>> a4098e87a8521c6c914c4a9a9b9c6fe797300a32
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label>Username</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-user"></i></div>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-key"></i></div>
-                </div>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
-              </div>
-            </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/shazam.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
         </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-success">SIGN IN</button>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/alita.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/petsematary.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/johnwick.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/instantfamily.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="modal fade" id="SignUp" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Join Us!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label>Username</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-user"></i></div>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-envelope"></i></div>
-                </div>
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-key"></i></div>
-                </div>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
-              </div>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-success">SIGN UP</button>
+    <div class="row row-card">
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/readyplayerone.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
         </div>
       </div>
-<<<<<<< HEAD
-=======
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/thorragnarok.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/tncfu.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/batman.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <img class="card-img" src="images/poster/bewithyou.jpg" alt="">
+          <a class="stretched-link" href="#"></a>
+        </div>
+      </div>
       <div class="col-md-2">
         <div class="card">
           <img class="card-img" src="images/poster/pengabdisetan.jpg" alt="">
@@ -257,9 +287,31 @@
         <i class="fas fa-align-left fa-3x feature-img"></i>
         <p>Write and share reviews, and follow friends and other members to read theirs</p>
       </div>
->>>>>>> a4098e87a8521c6c914c4a9a9b9c6fe797300a32
     </div>
-  </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3 feature-box ">
+        <i class="fas fa-star fa-3x feature-img"></i>
+        <p>Rate each film on a five-star scale (with halves) to record and share your reaction</p>
+      </div>
+      <div class="col-md-3 feature-box">
+        <i class="fas fa-calendar fa-3x feature-img"></i>
+        <p>Keep a diary of your film watching</p>
+      </div>
+      <div class="col-md-3 feature-box">
+        <i class="fas fa-th-large fa-3x feature-img"></i>
+        <p>Keep a watchlist of films to see</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <footer id="footer">
+    <a class="footer-logo" href="#"><i class="fab fa-twitter"></i></a>
+    <a class="footer-logo" href="#"><i class="fab fa-facebook-f"></i></a>
+    <a class="footer-logo" href="#"><i class="fab fa-instagram"></i></a>
+    <a class="footer-logo" href="#"><i class="fas fa-envelope"></i></a>
+    <p>© Copyright 2018 AfterNotes</p>
+  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
